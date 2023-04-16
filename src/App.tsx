@@ -33,13 +33,11 @@ const App: Component = () => {
     <div class={styles.App}>
       <Header />
       <Carousel swiperList={swiperList} />
-      <div class={styles.container}>
-        <div class={styles.row}>
+      <div class={styles.cards}>
         <For each={links.gallery}>{(card) =>
           <Card title={card.title} link={card.link} outline={card.outline} cover={card.cover} />
         }
         </For>
-        </div>
       </div>
     </div>
   );
