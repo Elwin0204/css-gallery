@@ -1,0 +1,1301 @@
+/* layout css */
+.colMd4,
+.colSm6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px
+}
+
+.colXs12 {
+  float: left
+}
+
+.colXs12 {
+  width: 100%
+}
+
+@media (min-width:768px) {
+  .colSm6 {
+    float: left
+  }
+
+  .colSm6 {
+    width: 50%
+  }
+}
+
+@media (min-width:992px) {
+  .colMd4 {
+    float: left
+  }
+
+  .colMd4 {
+    width: 33.33333333%
+  }
+}
+
+
+/* card wrapper css */
+.card {
+  position: relative;
+  height: 0;
+  padding-bottom: calc(100% - 16px);
+  margin-bottom: 6.6em;
+}
+
+/* card h2 css */
+.card h2 {
+  position: absolute;
+  top: calc(100% - 16px);
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  margin: 0;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card h2 span {
+  display: block;
+}
+
+.card h2 strong {
+  font-weight: 400;
+  display: block;
+  font-size: .8em;
+}
+.card h2 strong a {
+  text-decoration: none;
+}
+.card h2 strong em {
+  vertical-align: 4px;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.card h2:before,
+.card h2:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: -16px;
+  width: 0;
+  border: 8px solid;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card h2:after {
+  top: auto;
+  bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .card.active {
+    padding-bottom: 0;
+    height: auto;
+  }
+}
+
+.card.active h2 {
+  top: 0;
+  padding: 10px 16px 10px 90px;
+}
+
+.card.active h2:before {
+  top: 0;
+}
+
+.card.active h2:after {
+  bottom: -16px;
+}
+
+/* button toggle css */
+.card .btnToggle {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid;
+  width: 54px;
+  height: 54px;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 20;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card.active .btnToggle {
+  top: 65px;
+}
+
+.card .content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 16px;
+  left: 16px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card.active .content {
+  padding-top: 5.6em;
+}
+
+.card .imgBox {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card.active .imgBox {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  left: 0;
+  top: 12px;
+  width: 60px;
+  height: 60px;
+  z-index: 20;
+}
+
+.imgResponsive {
+  display: block;
+  max-width: 100%;
+  height: auto
+}
+
+.card .description {
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  left: 30px;
+  bottom: 54px;
+  overflow: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 1.2s;
+  -moz-transition: all 1.2s;
+  -ms-transition: all 1.2s;
+  -o-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.card.active .description {
+  top: 50px;
+  padding-top: 5.6em;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.card .footer {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card .footer h4 {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: all 1.4s;
+  -moz-transition: all 1.4s;
+  -ms-transition: all 1.4s;
+  -o-transition: all 1.4s;
+  transition: all 1.4s;
+}
+
+.card .footer i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+  top: 200px;
+}
+
+.card .footer i:nth-child(1) {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card .footer i:nth-child(2) {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.card .footer i:nth-child(3) {
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.card .footer i:nth-child(4) {
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.card .footer i:nth-child(5) {
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -ms-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+.card.active .footer {
+  overflow: visible;
+  position: absolute;
+  top: calc(100% - 16px);
+  left: 16px;
+  right: 0;
+  height: 82px;
+  padding-top: 15px;
+  padding-left: 25px;
+}
+
+.card.active .footer i {
+  top: 0;
+}
+
+.card.active .footer h4 {
+  top: -32px;
+}
+
+@media screen and (max-width: 767px) {
+  .card.active .content {
+    position: relative;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card.active .description {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    padding: 50px 30px 70px 30px;
+    bottom: 0;
+  }
+}
+
+.card.Red h2 {
+  background-color: #f44336;
+}
+
+.card.Red h2:after {
+  border-top-color: #f44336;
+  border-right-color: #f44336;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.card.Red h2:before {
+  border-top-color: transparent;
+  border-right-color: #b71c1c;
+  border-bottom-color: #b71c1c;
+  border-left-color: transparent;
+}
+
+.card.Red.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #f44336;
+  border-bottom-color: #f44336;
+  border-left-color: transparent;
+}
+
+.card.Red.active h2:after {
+  border-top-color: #b71c1c;
+  border-right-color: #b71c1c;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.card.Red .btnToggle {
+  background-color: #f44336;
+}
+
+.card.Red .btnToggle:hover {
+  background-color: #b71c1c;
+}
+
+.card.Red.active .content {
+  background-color: #ffebee;
+}
+
+.card.Red.active .footer {
+  background-color: #ffcdd2;
+}
+
+.card.Red.active .btnToggle {
+  border-color: #ffebee;
+}
+
+.card.Red .footer h4 {
+  color: #b71c1c;
+}
+
+.card.Red .footer i {
+  background-color: #b71c1c;
+}
+
+/* Pink */
+.card.Pink h2 {
+  background-color: #e91e63;
+}
+.card.Pink h2:after {
+  border-top-color: #e91e63;
+  border-right-color: #e91e63;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Pink h2:before {
+  border-top-color: transparent;
+  border-right-color: #880e4f;
+  border-bottom-color: #880e4f;
+  border-left-color: transparent;
+}
+.card.Pink.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #e91e63;
+  border-bottom-color: #e91e63;
+  border-left-color: transparent;
+}
+.card.Pink.active h2:after {
+  border-top-color: #880e4f;
+  border-right-color: #880e4f;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Pink .btnToggle {
+  background-color: #e91e63;
+}
+.card.Pink .btnToggle:hover {
+  background-color: #880e4f;
+}
+.card.Pink .footer h4 {
+  color: #880e4f;
+}
+.card.Pink .footer i {
+  background-color: #880e4f;
+}
+.card.Pink.active .content {
+  background-color: #fce4ec;
+}
+.card.Pink.active .footer {
+  background-color: #f8bbd0;
+}
+.card.Pink.active .btnToggle {
+  border-color: #fce4ec;
+}
+
+
+/* Purple */
+.card.Purple h2 {
+  background-color: #9c27b0;
+}
+.card.Purple h2:after {
+  border-top-color: #9c27b0;
+  border-right-color: #9c27b0;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Purple h2:before {
+  border-top-color: transparent;
+  border-right-color: #4a148c;
+  border-bottom-color: #4a148c;
+  border-left-color: transparent;
+}
+.card.Purple.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #9c27b0;
+  border-bottom-color: #9c27b0;
+  border-left-color: transparent;
+}
+.card.Purple.active h2:after {
+  border-top-color: #4a148c;
+  border-right-color: #4a148c;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Purple .btnToggle {
+  background-color: #9c27b0;
+}
+.card.Purple .btnToggle:hover {
+  background-color: #4a148c;
+}
+.card.Purple .footer h4 {
+  color: #4a148c;
+}
+.card.Purple .footer a {
+  background-color: #4a148c;
+}
+.card.Purple.active .content {
+  background-color: #f3e5f5;
+}
+.card.Purple.active .footer {
+  background-color: #e1bee7;
+}
+.card.Purple.active .btnToggle {
+  border-color: #f3e5f5;
+}
+
+/* DeepPurple */
+.card.DeepPurple h2 {
+  background-color: #673ab7;
+}
+.card.DeepPurple h2:after {
+  border-top-color: #673ab7;
+  border-right-color: #673ab7;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.DeepPurple h2:before {
+  border-top-color: transparent;
+  border-right-color: #311b92;
+  border-bottom-color: #311b92;
+  border-left-color: transparent;
+}
+.card.DeepPurple.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #673ab7;
+  border-bottom-color: #673ab7;
+  border-left-color: transparent;
+}
+.card.DeepPurple.active h2:after {
+  border-top-color: #311b92;
+  border-right-color: #311b92;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.DeepPurple .btnToggle {
+  background-color: #673ab7;
+}
+.card.DeepPurple .btnToggle:hover {
+  background-color: #311b92;
+}
+.card.DeepPurple .footer h4 {
+  color: #311b92;
+}
+.card.DeepPurple .footer a {
+  background-color: #311b92;
+}
+.card.DeepPurple.active .content {
+  background-color: #ede7f6;
+}
+.card.DeepPurple.active .footer {
+  background-color: #d1c4e9;
+}
+.card.DeepPurple.active .btnToggle {
+  border-color: #ede7f6;
+}
+
+/* Indigo */
+.card.Indigo h2 {
+  background-color: #3f51b5;
+}
+.card.Indigo h2:after {
+  border-top-color: #3f51b5;
+  border-right-color: #3f51b5;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Indigo h2:before {
+  border-top-color: transparent;
+  border-right-color: #1a237e;
+  border-bottom-color: #1a237e;
+  border-left-color: transparent;
+}
+.card.Indigo.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #3f51b5;
+  border-bottom-color: #3f51b5;
+  border-left-color: transparent;
+}
+.card.Indigo.active h2:after {
+  border-top-color: #1a237e;
+  border-right-color: #1a237e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Indigo .btnToggle {
+  background-color: #3f51b5;
+}
+.card.Indigo .btnToggle:hover {
+  background-color: #1a237e;
+}
+.card.Indigo .footer h4 {
+  color: #1a237e;
+}
+.card.Indigo .footer a {
+  background-color: #1a237e;
+}
+.card.Indigo.active .content {
+  background-color: #e8eaf6;
+}
+.card.Indigo.active .footer {
+  background-color: #c5cae9;
+}
+.card.Indigo.active .btnToggle {
+  border-color: #e8eaf6;
+}
+
+
+/* Blue */
+.card.Blue h2 {
+  background-color: #2196f3;
+}
+.card.Blue h2:after {
+  border-top-color: #2196f3;
+  border-right-color: #2196f3;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Blue h2:before {
+  border-top-color: transparent;
+  border-right-color: #0d47a1;
+  border-bottom-color: #0d47a1;
+  border-left-color: transparent;
+}
+.card.Blue.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #2196f3;
+  border-bottom-color: #2196f3;
+  border-left-color: transparent;
+}
+.card.Blue.active h2:after {
+  border-top-color: #0d47a1;
+  border-right-color: #0d47a1;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Blue .btnToggle {
+  background-color: #2196f3;
+}
+.card.Blue .btnToggle:hover {
+  background-color: #0d47a1;
+}
+.card.Blue .footer h4 {
+  color: #0d47a1;
+}
+.card.Blue .footer a {
+  background-color: #0d47a1;
+}
+.card.Blue.active .content {
+  background-color: #e3f2fd;
+}
+.card.Blue.active .footer {
+  background-color: #bbdefb;
+}
+.card.Blue.active .btnToggle {
+  border-color: #e3f2fd;
+}
+
+/* LightBlue */
+.card.LightBlue h2 {
+  background-color: #03a9f4;
+}
+.card.LightBlue h2:after {
+  border-top-color: #03a9f4;
+  border-right-color: #03a9f4;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.LightBlue h2:before {
+  border-top-color: transparent;
+  border-right-color: #01579b;
+  border-bottom-color: #01579b;
+  border-left-color: transparent;
+}
+.card.LightBlue.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #03a9f4;
+  border-bottom-color: #03a9f4;
+  border-left-color: transparent;
+}
+.card.LightBlue.active h2:after {
+  border-top-color: #01579b;
+  border-right-color: #01579b;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.LightBlue .btnToggle {
+  background-color: #03a9f4;
+}
+.card.LightBlue .btnToggle:hover {
+  background-color: #01579b;
+}
+.card.LightBlue .footer h4 {
+  color: #01579b;
+}
+.card.LightBlue .footer a {
+  background-color: #01579b;
+}
+.card.LightBlue.active .content {
+  background-color: #e1f5fe;
+}
+.card.LightBlue.active .footer {
+  background-color: #b3e5fc;
+}
+.card.LightBlue.active .btnToggle {
+  border-color: #e1f5fe;
+}
+
+/* Cyan */
+.card.Cyan h2 {
+  background-color: #00bcd4;
+}
+.card.Cyan h2:after {
+  border-top-color: #00bcd4;
+  border-right-color: #00bcd4;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Cyan h2:before {
+  border-top-color: transparent;
+  border-right-color: #006064;
+  border-bottom-color: #006064;
+  border-left-color: transparent;
+}
+.card.Cyan.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #00bcd4;
+  border-bottom-color: #00bcd4;
+  border-left-color: transparent;
+}
+.card.Cyan.active h2:after {
+  border-top-color: #006064;
+  border-right-color: #006064;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Cyan .btnToggle {
+  background-color: #00bcd4;
+}
+.card.Cyan .btnToggle:hover {
+  background-color: #006064;
+}
+.card.Cyan .footer h4 {
+  color: #006064;
+}
+.card.Cyan .footer a {
+  background-color: #006064;
+}
+.card.Cyan.active .content {
+  background-color: #e0f7fa;
+}
+.card.Cyan.active .footer {
+  background-color: #b2ebf2;
+}
+.card.Cyan.active .btnToggle {
+  border-color: #e0f7fa;
+}
+
+/* Teal */
+.card.Teal h2 {
+  background-color: #009688;
+}
+.card.Teal h2:after {
+  border-top-color: #009688;
+  border-right-color: #009688;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Teal h2:before {
+  border-top-color: transparent;
+  border-right-color: #004d40;
+  border-bottom-color: #004d40;
+  border-left-color: transparent;
+}
+.card.Teal.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #009688;
+  border-bottom-color: #009688;
+  border-left-color: transparent;
+}
+.card.Teal.active h2:after {
+  border-top-color: #004d40;
+  border-right-color: #004d40;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Teal .btnToggle {
+  background-color: #009688;
+}
+.card.Teal .btnToggle:hover {
+  background-color: #004d40;
+}
+.card.Teal .footer h4 {
+  color: #004d40;
+}
+.card.Teal .footer a {
+  background-color: #004d40;
+}
+.card.Teal.active .content {
+  background-color: #e0f2f1;
+}
+.card.Teal.active .footer {
+  background-color: #b2dfdb;
+}
+.card.Teal.active .btnToggle {
+  border-color: #e0f2f1;
+}
+
+/* Green */
+.card.Green h2 {
+  background-color: #4caf50;
+}
+.card.Green h2:after {
+  border-top-color: #4caf50;
+  border-right-color: #4caf50;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Green h2:before {
+  border-top-color: transparent;
+  border-right-color: #1b5e20;
+  border-bottom-color: #1b5e20;
+  border-left-color: transparent;
+}
+.card.Green.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #4caf50;
+  border-bottom-color: #4caf50;
+  border-left-color: transparent;
+}
+.card.Green.active h2:after {
+  border-top-color: #1b5e20;
+  border-right-color: #1b5e20;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Green .btnToggle {
+  background-color: #4caf50;
+}
+.card.Green .btnToggle:hover {
+  background-color: #1b5e20;
+}
+.card.Green .footer h4 {
+  color: #1b5e20;
+}
+.card.Green .footer a {
+  background-color: #1b5e20;
+}
+.card.Green.active .content {
+  background-color: #e8f5e9;
+}
+.card.Green.active .footer {
+  background-color: #c8e6c9;
+}
+.card.Green.active .btnToggle {
+  border-color: #e8f5e9;
+}
+
+/* LightGreen */
+.card.LightGreen h2 {
+  background-color: #8bc34a;
+}
+.card.LightGreen h2:after {
+  border-top-color: #8bc34a;
+  border-right-color: #8bc34a;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.LightGreen h2:before {
+  border-top-color: transparent;
+  border-right-color: #33691e;
+  border-bottom-color: #33691e;
+  border-left-color: transparent;
+}
+.card.LightGreen.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #8bc34a;
+  border-bottom-color: #8bc34a;
+  border-left-color: transparent;
+}
+.card.LightGreen.active h2:after {
+  border-top-color: #33691e;
+  border-right-color: #33691e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.LightGreen .btnToggle {
+  background-color: #8bc34a;
+}
+.card.LightGreen .btnToggle:hover {
+  background-color: #33691e;
+}
+.card.LightGreen .footer h4 {
+  color: #33691e;
+}
+.card.LightGreen .footer a {
+  background-color: #33691e;
+}
+.card.LightGreen.active .content {
+  background-color: #f1f8e9;
+}
+.card.LightGreen.active .footer {
+  background-color: #dcedc8;
+}
+.card.LightGreen.active .btnToggle {
+  border-color: #f1f8e9;
+}
+
+/* Lime */
+.card.Lime h2 {
+  background-color: #cddc39;
+}
+.card.Lime h2:after {
+  border-top-color: #cddc39;
+  border-right-color: #cddc39;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Lime h2:before {
+  border-top-color: transparent;
+  border-right-color: #827717;
+  border-bottom-color: #827717;
+  border-left-color: transparent;
+}
+.card.Lime.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #cddc39;
+  border-bottom-color: #cddc39;
+  border-left-color: transparent;
+}
+.card.Lime.active h2:after {
+  border-top-color: #827717;
+  border-right-color: #827717;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Lime .btnToggle {
+  background-color: #cddc39;
+}
+.card.Lime .btnToggle:hover {
+  background-color: #827717;
+}
+.card.Lime .footer h4 {
+  color: #827717;
+}
+.card.Lime .footer a {
+  background-color: #827717;
+}
+.card.Lime.active .content {
+  background-color: #f9fbe7;
+}
+.card.Lime.active .footer {
+  background-color: #f0f4c3;
+}
+.card.Lime.active .btnToggle {
+  border-color: #f9fbe7;
+}
+
+/* Yellow */
+.card.Yellow h2 {
+  background-color: #ffeb3b;
+}
+.card.Yellow h2:after {
+  border-top-color: #ffeb3b;
+  border-right-color: #ffeb3b;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Yellow h2:before {
+  border-top-color: transparent;
+  border-right-color: #f57f17;
+  border-bottom-color: #f57f17;
+  border-left-color: transparent;
+}
+.card.Yellow.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #ffeb3b;
+  border-bottom-color: #ffeb3b;
+  border-left-color: transparent;
+}
+.card.Yellow.active h2:after {
+  border-top-color: #f57f17;
+  border-right-color: #f57f17;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Yellow .btnToggle {
+  background-color: #ffeb3b;
+}
+.card.Yellow .btnToggle:hover {
+  background-color: #f57f17;
+}
+.card.Yellow .footer h4 {
+  color: #f57f17;
+}
+.card.Yellow .footer a {
+  background-color: #f57f17;
+}
+.card.Yellow.active .content {
+  background-color: #fffde7;
+}
+.card.Yellow.active .footer {
+  background-color: #fff9c4;
+}
+.card.Yellow.active .btnToggle {
+  border-color: #fffde7;
+}
+
+/* Amber */
+.card.Amber h2 {
+  background-color: #ffc107;
+}
+.card.Amber h2:after {
+  border-top-color: #ffc107;
+  border-right-color: #ffc107;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Amber h2:before {
+  border-top-color: transparent;
+  border-right-color: #ff6f00;
+  border-bottom-color: #ff6f00;
+  border-left-color: transparent;
+}
+.card.Amber.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #ffc107;
+  border-bottom-color: #ffc107;
+  border-left-color: transparent;
+}
+.card.Amber.active h2:after {
+  border-top-color: #ff6f00;
+  border-right-color: #ff6f00;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Amber .btnToggle {
+  background-color: #ffc107;
+}
+.card.Amber .btnToggle:hover {
+  background-color: #ff6f00;
+}
+.card.Amber .footer h4 {
+  color: #ff6f00;
+}
+.card.Amber .footer a {
+  background-color: #ff6f00;
+}
+.card.Amber.active .content {
+  background-color: #fff8e1;
+}
+.card.Amber.active .footer {
+  background-color: #ffecb3;
+}
+.card.Amber.active .btnToggle {
+  border-color: #fff8e1;
+}
+
+/* Orange */
+.card.Orange h2 {
+  background-color: #ff9800;
+}
+.card.Orange h2:after {
+  border-top-color: #ff9800;
+  border-right-color: #ff9800;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Orange h2:before {
+  border-top-color: transparent;
+  border-right-color: #e65100;
+  border-bottom-color: #e65100;
+  border-left-color: transparent;
+}
+.card.Orange.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #ff9800;
+  border-bottom-color: #ff9800;
+  border-left-color: transparent;
+}
+.card.Orange.active h2:after {
+  border-top-color: #e65100;
+  border-right-color: #e65100;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Orange .btnToggle {
+  background-color: #ff9800;
+}
+.card.Orange .btnToggle:hover {
+  background-color: #e65100;
+}
+.card.Orange .footer h4 {
+  color: #e65100;
+}
+.card.Orange .footer a {
+  background-color: #e65100;
+}
+.card.Orange.active .content {
+  background-color: #fff3e0;
+}
+.card.Orange.active .footer {
+  background-color: #ffe0b2;
+}
+.card.Orange.active .btnToggle {
+  border-color: #fff3e0;
+}
+
+/* DeepOrange */
+.card.DeepOrange h2 {
+  background-color: #ff5722;
+}
+.card.DeepOrange h2:after {
+  border-top-color: #ff5722;
+  border-right-color: #ff5722;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.DeepOrange h2:before {
+  border-top-color: transparent;
+  border-right-color: #bf360c;
+  border-bottom-color: #bf360c;
+  border-left-color: transparent;
+}
+.card.DeepOrange.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #ff5722;
+  border-bottom-color: #ff5722;
+  border-left-color: transparent;
+}
+.card.DeepOrange.active h2:after {
+  border-top-color: #bf360c;
+  border-right-color: #bf360c;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.DeepOrange .btnToggle {
+  background-color: #ff5722;
+}
+.card.DeepOrange .btnToggle:hover {
+  background-color: #bf360c;
+}
+.card.DeepOrange .footer h4 {
+  color: #bf360c;
+}
+.card.DeepOrange .footer a {
+  background-color: #bf360c;
+}
+.card.DeepOrange.active .content {
+  background-color: #fbe9e7;
+}
+.card.DeepOrange.active .footer {
+  background-color: #ffccbc;
+}
+.card.DeepOrange.active .btnToggle {
+  border-color: #fbe9e7;
+}
+
+/* Brown */
+.card.Brown h2 {
+  background-color: #795548;
+}
+.card.Brown h2:after {
+  border-top-color: #795548;
+  border-right-color: #795548;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Brown h2:before {
+  border-top-color: transparent;
+  border-right-color: #3e2723;
+  border-bottom-color: #3e2723;
+  border-left-color: transparent;
+}
+.card.Brown.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #795548;
+  border-bottom-color: #795548;
+  border-left-color: transparent;
+}
+.card.Brown.active h2:after {
+  border-top-color: #3e2723;
+  border-right-color: #3e2723;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Brown .btnToggle {
+  background-color: #795548;
+}
+.card.Brown .btnToggle:hover {
+  background-color: #3e2723;
+}
+.card.Brown .footer h4 {
+  color: #3e2723;
+}
+.card.Brown .footer a {
+  background-color: #3e2723;
+}
+.card.Brown.active .content {
+  background-color: #efebe9;
+}
+.card.Brown.active .footer {
+  background-color: #d7ccc8;
+}
+.card.Brown.active .btnToggle {
+  border-color: #efebe9;
+}
+
+/* Grey */
+.card.Grey h2 {
+  background-color: #9e9e9e;
+}
+.card.Grey h2:after {
+  border-top-color: #9e9e9e;
+  border-right-color: #9e9e9e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Grey h2:before {
+  border-top-color: transparent;
+  border-right-color: #212121;
+  border-bottom-color: #212121;
+  border-left-color: transparent;
+}
+.card.Grey.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #9e9e9e;
+  border-bottom-color: #9e9e9e;
+  border-left-color: transparent;
+}
+.card.Grey.active h2:after {
+  border-top-color: #212121;
+  border-right-color: #212121;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.Grey .btnToggle {
+  background-color: #9e9e9e;
+}
+.card.Grey .btnToggle:hover {
+  background-color: #212121;
+}
+.card.Grey .footer h4 {
+  color: #212121;
+}
+.card.Grey .footer a {
+  background-color: #212121;
+}
+.card.Grey.active .content {
+  background-color: #fafafa;
+}
+.card.Grey.active .footer {
+  background-color: #f5f5f5;
+}
+.card.Grey.active .btnToggle {
+  border-color: #fafafa;
+}
+
+/* BlueGrey */
+.card.BlueGrey h2 {
+  background-color: #607d8b;
+}
+.card.BlueGrey h2:after {
+  border-top-color: #607d8b;
+  border-right-color: #607d8b;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.BlueGrey h2:before {
+  border-top-color: transparent;
+  border-right-color: #263238;
+  border-bottom-color: #263238;
+  border-left-color: transparent;
+}
+.card.BlueGrey.active h2:before {
+  border-top-color: transparent;
+  border-right-color: #607d8b;
+  border-bottom-color: #607d8b;
+  border-left-color: transparent;
+}
+.card.BlueGrey.active h2:after {
+  border-top-color: #263238;
+  border-right-color: #263238;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.card.BlueGrey .btnToggle {
+  background-color: #607d8b;
+}
+.card.BlueGrey .btnToggle:hover {
+  background-color: #263238;
+}
+.card.BlueGrey .footer h4 {
+  color: #263238;
+}
+.card.BlueGrey .footer a {
+  background-color: #263238;
+}
+.card.BlueGrey.active .content {
+  background-color: #eceff1;
+}
+.card.BlueGrey.active .footer {
+  background-color: #cfd8dc;
+}
+.card.BlueGrey.active .btnToggle {
+  border-color: #eceff1;
+}
+

@@ -1,0 +1,135 @@
+.cgHeader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  z-index: 1001;
+}
+
+.cgContainer {
+  height: 80px;
+  line-height: 80px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.cgContainer .brand {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.brand img {
+  width: 60px;
+}
+
+.brand span {
+  color:#FF1177;
+  font-family:Monoton;
+  font-size: 32px;
+}
+
+.brand span:hover{
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate; 
+}
+
+.brand img:hover {
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate; 
+}
+
+/*glow for webkit*/
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+              0 0 20px  #fff,
+              0 0 30px  #fff,
+              0 0 40px  #FF1177,
+              0 0 70px  #FF1177,
+              0 0 80px  #FF1177,
+              0 0 100px #FF1177,
+              0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+              0 0 10px #fff,
+              0 0 15px #fff,
+              0 0 20px #FF1177,
+              0 0 35px #FF1177,
+              0 0 40px #FF1177,
+              0 0 50px #FF1177,
+              0 0 75px #FF1177;
+  }
+}
+
+/*glow for mozilla*/
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+              0 0 20px  #fff,
+              0 0 30px  #fff,
+              0 0 40px  #FF1177,
+              0 0 70px  #FF1177,
+              0 0 80px  #FF1177,
+              0 0 100px #FF1177,
+              0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+              0 0 10px #fff,
+              0 0 15px #fff,
+              0 0 20px #FF1177,
+              0 0 35px #FF1177,
+              0 0 40px #FF1177,
+              0 0 50px #FF1177,
+              0 0 75px #FF1177;
+  }
+}
+
+/*glow*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+              0 0 20px  #fff,
+              0 0 30px  #fff,
+              0 0 40px  #FF1177,
+              0 0 70px  #FF1177,
+              0 0 80px  #FF1177,
+              0 0 100px #FF1177,
+              0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+              0 0 10px #fff,
+              0 0 15px #fff,
+              0 0 20px #FF1177,
+              0 0 35px #FF1177,
+              0 0 40px #FF1177,
+              0 0 50px #FF1177,
+              0 0 75px #FF1177;
+  }
+}
+
+@media (min-width:768px) {
+  .cgContainer {
+    width: 750px
+  }
+}
+
+@media (min-width:992px) {
+  .cgContainer {
+    width: 970px
+  }
+}
+
+@media (min-width:1200px) {
+  .cgContainer {
+    width: 1170px
+  }
+}
