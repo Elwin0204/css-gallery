@@ -19,6 +19,12 @@ export default {
       "link": "social-3d-hover/index.html",
       "cover": "cover/social-3d-hover.png",
       "outline": "按钮悬停立体效果"
+    },
+    {
+      "title": "超可爱的星空火箭",
+      "link": "rocket/index.html",
+      "cover": "cover/rocket.png",
+      "outline": "超可爱的星空火箭"
     }
   ]
 }

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>超可爱的星空火箭</title>
+</head>
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    background: url(images/bg.png);
+  }
+  .rocket-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .rocket {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .logo {
+    position: absolute;
+    top: 55px;
+    left: 13px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5e0c0c;
+    z-index: 10;
+  }
+
+  .logo::before {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 3px;
+    background-color: #5e0c0c;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -6px;
+    left: 14px;
+  }
+
+  .logo::after {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 3px;
+    background-color: #5e0c0c;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -6px;
+    left: 18px;
+  }
+
+  .rocket-head {
+    position: relative;
+    overflow: hidden;
+    width: 65px;
+    height: 65px;
+    background: #772d2d;
+    border-radius: 50% / 100% 100% 0 0;
+  }
+
+  .rocket-head-main {
+    position: absolute;
+    left: 50%;
+    top: 22px;
+    width: 140px;
+    height: 60px;
+    background: #c44141;
+    border-radius: 50% / 100% 100% 0 0;
+    transform: translateX(-50%);
+  }
+
+  .rocket-body {
+    position: relative;
+    overflow: hidden;
+    width: 65px;
+    height: 45px;
+    background: #c44141;
+  }
+
+  .rocket-body-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 110px;
+    height: 14px;
+    background: #772d2d;
+    border-radius: 50% / 100% 100% 0 0;
+    transform: translateX(-50%);
+  }
+
+  .rocket-tail {
+    margin: 0 auto;
+    height: 0px;
+    width: 44px;
+    border-top: 11px solid #0f2132;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+  }
+
+  .rocket-fire {
+    position: relative;
+    width: 43px;
+    margin: 0 auto;
+    border-width: 8px 0px;
+    border-style: solid;
+    border-color: #4f6a82;
+    border-radius: 50% / 0 0 100% 100%;
+  }
+
+  .fire1 {
+    position: absolute;
+    top: -2px;
+    left: -9px;
+    height: 0;
+    width: 0;
+    border-width: 5px 15px 20px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent #4f6a82;
+    transform: rotate(30deg);
+  }
+
+  .fire2 {
+    position: absolute;
+    top: 0px;
+    left: 9px;
+    height: 0;
+    width: 0;
+    border-width: 8px 15px 15px 18px;
+    border-style: solid;
+    border-color: transparent transparent transparent #4f6a82;
+    transform: rotate(-10deg);
+  }
+
+  .fire3 {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    height: 0;
+    width: 0;
+    border-width: 8px 18px 15px 10px;
+    border-style: solid;
+    border-color: transparent #4f6a82 transparent transparent;
+    transform: rotate(-10deg);
+  }
+
+  .fire4 {
+    position: absolute;
+    top: -1px;
+    left: 25px;
+    height: 0;
+    width: 0;
+    border-width: 4px 12px 18px 18px;
+    border-style: solid;
+    border-color: transparent #4f6a82 transparent transparent;
+    transform: rotate(-45deg);
+  }
+
+  .wing1 {
+    position: absolute;
+    top: 64px;
+    left: -26px;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-width: 10px 24px;
+    border-style: solid;
+    border-color: #ff6666;
+    border-radius: 24px/10px;
+    transform: rotate(-45deg);
+  }
+
+  .wing2 {
+    position: absolute;
+    top: 64px;
+    right: -26px;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-width: 10px 24px;
+    border-style: solid;
+    border-color: #ff6666;
+    border-radius: 24px/10px;
+    transform: rotate(45deg);
+  }
+
+  .rocket:hover {
+    animation: rocketJump .5s infinite ease-in-out;
+  }
+
+  .rocket:hover .wing1 {
+    transform-origin: center 80%;
+    animation: wingWave1 .5s infinite ease-in-out;
+  }
+
+  .rocket:hover .wing2 {
+    transform-origin: center 80%;
+    animation: wingWave2 .5s infinite ease-in-out;
+  }
+
+  .rocket:hover .rocket-fire {
+    animation: bouncing .5s infinite ease-in-out;
+  }
+
+  .rocket:hover .fire1,
+  .rocket:hover .fire2 {
+    animation: fire12 .5s infinite ease-in-out;
+  }
+
+  .rocket:hover .fire3,
+  .rocket:hover .fire4 {
+    animation: fire34 .5s infinite ease-in-out;
+  }
+
+  @keyframes rocketJump {
+    0% {
+      transform: translateY(0px);
+    }
+
+    25% {
+      transform: translateY(-5px);
+    }
+
+    25% {
+      transform: translateY(0px);
+    }
+
+    75% {
+      transform: translateY(5px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes wingWave1 {
+    0% {
+      transform: rotate(-45deg);
+    }
+
+    25% {
+      transform: rotate(-30deg);
+    }
+
+    50% {
+      transform: rotate(-45deg);
+    }
+
+    75% {
+      transform: rotate(-60deg);
+    }
+
+    100% {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes wingWave2 {
+    0% {
+      transform: rotate(45deg);
+    }
+
+    25% {
+      transform: rotate(30deg);
+    }
+
+    50% {
+      transform: rotate(45deg);
+    }
+
+    75% {
+      transform: rotate(60deg);
+    }
+
+    100% {
+      transform: rotate(45deg);
+    }
+  }
+
+  @keyframes bouncing {
+    0% {
+      transform: scale(90%);
+      border-color: aliceblue;
+    }
+
+    50% {
+      transform: scale(60%);
+      border-color: #4f6a82;
+    }
+
+    100% {
+      transform: scale(90%);
+      border-color: aliceblue;
+    }
+  }
+
+  @keyframes fire12 {
+    0% {
+      border-color: transparent transparent transparent aliceblue;
+    }
+
+    50% {
+      border-color: transparent transparent transparent #4f6a82;
+    }
+
+    100% {
+      border-color: transparent transparent transparent aliceblue;
+    }
+  }
+
+  @keyframes fire34 {
+    0% {
+      border-color: transparent aliceblue transparent transparent;
+    }
+
+    50% {
+      border-color: transparent #4f6a82 transparent transparent;
+    }
+
+    100% {
+      border-color: transparent aliceblue transparent transparent;
+    }
+  }
+</style>
+<body>
+  <div class="rocket-wrapper">
+    <div class="rocket">
+      <div class="logo">TOP</div>
+      <div class="rocket-head">
+        <div class="rocket-head-main"></div>
+      </div>
+      <div class="rocket-body">
+        <div class="rocket-body-bottom"></div>
+      </div>
+      <div class="rocket-tail"></div>
+      <div class="rocket-fire">
+        <div class="fire1"></div>
+        <div class="fire2"></div>
+        <div class="fire3"></div>
+        <div class="fire4"></div>
+      </div>
+      <div class="wing1"></div>
+      <div class="wing2"></div>
+    </div>
+  </div>
+</body>
+</html>
