@@ -25,6 +25,18 @@ export default {
       "link": "rocket/index.html",
       "cover": "cover/rocket.png",
       "outline": "超可爱的星空火箭"
+    },
+    {
+      "title": "雪夜绽放的腊梅",
+      "link": "wintersweet/index.html",
+      "cover": "cover/wintersweet.png",
+      "outline": "雪夜绽放的腊梅"
+    },
+    {
+      "title": "大红灯笼高高挂",
+      "link": "lantern/index.html",
+      "cover": "cover/lantern.png",
+      "outline": "大红灯笼高高挂"
     }
   ]
 }
