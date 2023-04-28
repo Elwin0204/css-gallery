@@ -37,6 +37,12 @@ export default {
       "link": "lantern/index.html",
       "cover": "cover/lantern.png",
       "outline": "大红灯笼高高挂"
+    },
+    {
+      "title": "有趣的网格背景",
+      "link": "grid-bg/index.html",
+      "cover": "cover/grid-bg.png",
+      "outline": "有趣的网格背景"
     }
   ]
 }
