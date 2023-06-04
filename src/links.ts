@@ -43,6 +43,12 @@ export default {
       "link": "grid-bg/index.html",
       "cover": "cover/grid-bg.png",
       "outline": "有趣的网格背景"
+    },
+    {
+      "title": "SVG彩色叶子发光变色动画特效",
+      "link": "colorful-leaf-glow/index.html",
+      "cover": "cover/colorful-leaf-glow.png",
+      "outline": "SVG彩色叶子发光变色动画特效"
     }
   ]
 }

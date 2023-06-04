@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3 SVG彩色叶子发光变色动画特效</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <svg class="svg svg--rays">
+    <circle r="50%" cx="50%" cy="50%" class="c-rays"></circle>
+  </svg>
+
+  <svg class="svg svg--hand" viewBox="0 0 700 440">
+    <defs>
+      <mask id="mask" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+        <image xlink:href="https://img-fotki.yandex.ru/get/9167/5091629.a4/0_8d418_ba8c7e7d_orig" width="700"
+          height="440"></image>
+      </mask>
+
+      <pattern id="patt" width="500" height="500" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+
+        <rect width="10" height="10" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="10" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="10" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="10" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="10" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="10" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="10" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="10" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="10" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="10" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="10" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="20" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="20" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="20" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="20" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="20" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="20" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="20" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="20" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="20" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="20" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="30" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="30" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="30" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="30" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="30" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="30" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="30" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="30" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="30" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="30" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="40" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="40" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="40" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="40" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="40" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="40" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="40" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="40" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="40" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="40" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="50" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="50" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="50" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="50" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="50" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="50" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="50" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="50" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="50" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="50" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="60" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="60" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="60" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="60" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="60" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="60" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="60" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="60" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="60" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="60" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="70" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="70" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="70" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="70" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="70" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="70" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="70" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="70" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="70" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="70" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="80" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="80" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="80" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="80" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="80" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="80" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="80" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="80" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="80" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="80" fill="purple" class="cell"></rect>
+
+        <!-- line -->
+        <rect width="10" height="10" y="90" fill="maroon" class="cell"></rect>
+        <rect width="10" height="10" x="10" y="90" fill="crimson" class="cell"></rect>
+        <rect width="10" height="10" x="20" y="90" fill="orangered" class="cell"></rect>
+        <rect width="10" height="10" x="30" y="90" fill="gold" class="cell"></rect>
+        <rect width="10" height="10" x="40" y="90" fill="yellowgreen" class="cell"></rect>
+        <rect width="10" height="10" x="50" y="90" fill="skyblue" class="cell"></rect>
+        <rect width="10" height="10" x="60" y="90" fill="steelblue" class="cell"></rect>
+        <rect width="10" height="10" x="70" y="90" fill="darkslateblue" class="cell"></rect>
+        <rect width="10" height="10" x="80" y="90" fill="darkviolet" class="cell"></rect>
+        <rect width="10" height="10" x="90" y="90" fill="purple" class="cell"></rect>
+
+      </pattern>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#patt)" mask="url(#mask)">
+    </rect>
+  </svg>
+</body>
+
+</html>
