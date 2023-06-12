@@ -49,6 +49,12 @@ export default {
       "link": "colorful-leaf-glow/index.html",
       "cover": "cover/colorful-leaf-glow.png",
       "outline": "SVG彩色叶子发光变色动画特效"
+    },
+    {
+      "title": "左右宽度可拖动侧边可切换显隐",
+      "link": "drag-side-lr/index.html",
+      "cover": "drag-side-lr.png",
+      "outline": "左右宽度可拖动侧边可切换显隐"
     }
   ]
 }

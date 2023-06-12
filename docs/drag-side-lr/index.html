@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    .left {
+      position: relative;
+      width: 50%;
+      background-color: red;
+      height: 100%;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .right {
+      overflow: hidden;
+      background-color: yellow;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .drag {
+      width: 20px;
+      height: 20px;
+      background-color: aquamarine;
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+
+    .top-wrapper {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rebeccapurple;
+      z-index: 999;
+      transition: width 1s ease-in-out;
+    }
+
+    .top-inner {
+      position: relative;
+      width: 0;
+      height: 100%;
+      transition: width 1s ease-in-out;
+    }
+
+    .pdf-side {
+      float: left;
+      width: 100%;
+      height: 100%;
+      background: palegreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .drag1 {
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+      position: absolute;
+      right: -20px;
+      top: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="left" id="JS_Left">
+    左邊
+    <div class="drag" id="JS_Resize"></div>
+  </div>
+  <div class="right" id="JS_Right">
+    右邊
+  </div>
+  <div class="top-wrapper">
+    <div class="top-inner" id="JS_Top">
+      <div class="pdf-side">侧边</div>
+      <div id="JS_Drag2" class="drag1"></div>
+    </div>
+  </div>
+  <script>
+    var dragEl = document.getElementById('JS_Resize');
+    var leftEl = document.getElementById('JS_Left');
+    var rightEl = document.getElementById('JS_Right');
+    dragEl.onmousedown = function (e) {
+      var startX = e.clientX;
+
+      document.onmousemove = function (e) {
+        var endX = e.clientX;
+        var moveLen = endX - startX;
+        leftEl.style.width = leftEl.getBoundingClientRect().width + moveLen + 'px';
+        startX = endX;
+      };
+
+      document.onmouseup = function (e) {
+        document.onmousemove = null;
+        document.onmouseup = null;
+      }
+    }
+    var toggle = false;
+    var startL = 0;
+    var startT = 0;
+    var dragEl2 = document.getElementById('JS_Drag2');
+    var topEl2 = document.getElementById('JS_Top');
+    dragEl2.onclick = function (e) {
+      if (Math.abs(e.clientX - startL) > 2 || Math.abs(e.clientY - startT) > 2) {
+        startL = 0;
+        startT = 0;
+        return;
+      }
+      toggle = !toggle;
+      if (toggle) {
+        var w = document.documentElement.clientWidth;
+        topEl2.style.width = w / 2 + 'px';
+      } else {
+        topEl2.style.width = '0px';
+      }
+    }
+    dragEl2.onmousedown = function (e) {
+      var startX = e.clientX;
+      startL = e.clientX;
+      startT = e.clientY;
+      topEl2.style.transition = 'none';
+      document.onmousemove = function (e) {
+        var endX = e.clientX;
+        var moveLen = endX - startX;
+
+        var w = topEl2.getBoundingClientRect().width
+        topEl2.style.width = w + moveLen + 'px';
+        startX = endX;
+      };
+
+      document.onmouseup = function (e) {
+        topEl2.style.transition = 'width 1s ease-in-out';
+        document.onmousemove = null;
+        document.onmouseup = null;
+      }
+    }
+  </script>
+</body>
+
+</html>
